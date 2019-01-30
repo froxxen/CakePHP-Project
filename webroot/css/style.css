@@ -1,3 +1,119 @@
-h3 {
-	color:red !important;
+@import url('http://fonts.googleapis.com/css?family=Vollkorn');
+
+h3, h1, h2 {
+	color:#e60000 !important;
+	font-family: 'Vollkorn', serif !important;
+}
+
+body, table, td, tr, th, p {
+	font-family: 'Vollkorn', serif;
+}
+
+.links a{
+	font-size:14px !important;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white !important;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+font-family: 'Vollkorn', serif;
+}
+
+#links a {
+	font-size:14px !important;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white !important;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+font-family: 'Vollkorn', serif;
+}
+
+
+ul.nav.navbar-nav.navbar-right {
+	float:left !important;
+}
+
+div.offices.view.large-9.medium-8.columns.content {
+	padding-left:10px !important;
+}
+
+#office_table {
+	max-width:500px;
+	padding: 10px;
+}
+
+#all_tables {
+	padding:10px;
+	max-width:100%;
+}
+
+#custom_save_tables {
+	padding:10px;
+	max-width:500px;
+}
+
+.paginator {
+	padding:10px;
+}
+
+.send_btn button {
+	font-size:14px !important;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white !important;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+form.navbar-form.navbar-right {
+	display:none;
 }

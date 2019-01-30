@@ -45,21 +45,21 @@ class ConnectionsTable extends Table
 
         $this->belongsTo('Offices', [
             'foreignKey' => 'office_id',
-            'joinType' => 'INNER'
+            'joinType' => 'LEFT'
         ]);
         $this->belongsTo('Rooms', [
             'foreignKey' => 'room_id',
-            'joinType' => 'INNER'
+            'joinType' => 'LEFT'
         ]);
         $this->belongsTo('Devices', [
             'foreignKey' => 'device_id',
-            'joinType' => 'INNER'
+            'joinType' => 'LEFT'
             
 
         ]);
         $this->belongsTo('Softwares', [
             'foreignKey' => 'software_id',
-            'joinType' => 'INNER'
+            'joinType' => 'LEFT'
         ]);
     }
 

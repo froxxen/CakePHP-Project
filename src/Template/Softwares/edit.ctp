@@ -2,8 +2,9 @@
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Software $software
- */
+ */$this->extend('../Layout/TwitterBootstrap/dashboard');
 ?>
+<!--
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -17,16 +18,18 @@
         <li><?= $this->Html->link(__('List Connections'), ['controller' => 'Connections', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Connection'), ['controller' => 'Connections', 'action' => 'add']) ?></li>
     </ul>
-</nav>
-<div class="softwares form large-9 medium-8 columns content">
+</nav> -->
+<div class="softwares form large-9 medium-8 columns content" id="office_table">
     <?= $this->Form->create($software) ?>
     <fieldset>
-        <legend><?= __('Edit Software') ?></legend>
+        <h2><?= __('Muokkaa sovelluksen tietoja') ?></h2>
         <?php
-            echo $this->Form->control('softwareName');
-            echo $this->Form->control('softwareLicence');
+            echo $this->Form->control('softwareName', ['label' => 'Nimi']);
+            echo $this->Form->control('softwareLicence', ['label' => 'Lisenssi']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <div class="send_btn">
+    <?= $this->Form->button(__('Tallenna')) ?>
     <?= $this->Form->end() ?>
+    </div>
 </div>

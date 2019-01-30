@@ -8,32 +8,24 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $office->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $office->id)]
-            )
-        ?></li>
         <li><?= $this->Html->link(__('List Offices'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Connections'), ['controller' => 'Connections', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Connection'), ['controller' => 'Connections', 'action' => 'add']) ?></li>
     </ul>
 </nav> -->
-
+<div id="custom_save_tables">
     <div class="offices form large-9 medium-8 columns content" id="office_table">
-        <?= $this->Form->create($office) ?>
+        <?= $this->Form->create() ?>
         <fieldset>
-            <h1><?= __('Muokkaa toimiston tietoja') ?></h1>
+            <h3><?= __('Lisää sovellus') ?></h3>
             <?php
-                echo $this->Form->control('name', ['label' => 'Nimi']);
-                echo $this->Form->control('city', ['label' => 'Kaupunki']);
-                echo $this->Form->control('address', ['label' => 'Osoite']);
-                echo $this->Form->control('region', ['label' => 'Maakunta']);
-                echo $this->Form->control('postalCode', ['label' => 'Postinumero']);
+                echo $this->Form->control('roomPurpose', ['label' => 'Huoneen tarkoitus']);
+                echo $this->Form->control('roomNumber', ['label' => 'Huoneen numero']);
             ?>
         </fieldset>
         <div class="send_btn">
-            <?= $this->Form->button(__('Lähetä tiedot')) ?>
-            <?= $this->Form->end() ?>
+        <?= $this->Form->button(__('Tallenna')) ?>
+        <?= $this->Form->end() ?>
         </div>
     </div>
+</div>

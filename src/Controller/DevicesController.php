@@ -36,7 +36,7 @@ class DevicesController extends AppController
     public function view($id = null)
     {
         $device = $this->Devices->get($id, [
-            'contain' => ['Connections']
+            'contain' => ['Connections' => ['softwares', 'rooms', 'devices']]
         ]);
 
         $this->set('device', $device);

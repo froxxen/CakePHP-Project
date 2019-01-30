@@ -8,6 +8,8 @@ $this->start('tb_body_start');
 echo $this->Html->css('../webroot/css/style.css');
 echo $this->Html->css('/webroot/css/bootstrap.css');
 echo $this->Html->script(['/webroot/js/jquery-3.2.1.min', '/webroot/js/bootstrap.js']);
+echo $this->Html->css(['cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css']);
+echo $this->Html->script(['cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'])
 ?>
 <body <?= $this->fetch('tb_body_attrs') ?>>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -29,9 +31,17 @@ echo $this->Html->script(['/webroot/js/jquery-3.2.1.min', '/webroot/js/bootstrap
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-divider"></li> 
 
-                    <li><?= $this->Html->link(__('Uusi toimipiste'), ['action' => 'add']) ?></li>
-                    <li><?= $this->Html->link(__('Kaikki yhteydet'), ['controller' => 'Connections', 'action' => 'index']) ?></li>
-                    <li><?= $this->Html->link(__('Uusi yhteys'), ['controller' => 'Connections', 'action' => 'add']) ?></li>
+                    <li><?= $this->Html->link(__('Toimipisteet'), ['controller' => 'Offices','action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Uusi toimipiste'), ['controller' => 'Offices', 'action' => 'add']) ?></li>
+		      <li><?= $this->Html->link(__('Huoneet'), ['controller' => 'Rooms', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Laitteet'), ['controller' => 'Devices', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Sovellukset'), ['controller' => 'Softwares', 'action' => 'index']) ?></li>
+                    
+                   <!-- <li><?= $this->Html->link(__('Uusi yhteys'), ['controller' => 'Connections', 'action' => 'add']) ?></li> -->
+                   
+                   <li><?= $this->Html->link(__('Käyttäjät'), 'http://95.85.16.209/dentalCareVer2/users/users');?></li>
+                   <li> <?= $this->Html->link(__('Kirjaudu ulos'), ['action' => 'logout', 'controller' => 'Users/Users']); ?> </li>
+
 
                 </ul>
                 <form class="navbar-form navbar-right">

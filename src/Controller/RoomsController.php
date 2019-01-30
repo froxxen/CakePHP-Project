@@ -36,7 +36,7 @@ class RoomsController extends AppController
     public function view($id = null)
     {
         $room = $this->Rooms->get($id, [
-            'contain' => ['Connections']
+            'contain' => ['Connections' => ['softwares', 'rooms', 'devices']]
         ]);
 
         $this->set('room', $room);

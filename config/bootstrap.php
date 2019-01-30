@@ -43,6 +43,9 @@ use Cake\Log\Log;
 use Cake\Mailer\Email;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
+use App\Listener\UserListener;
+use Cake\Event\EventManager;
+EventManager::instance()->on(new UserListener());
 
 
 /**
